@@ -1,11 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git and GitHub Full Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    code {
+      
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .details {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <h1>🚀 Git & GitHub Full Guide (Detailed & Interactive)</h1>
+
+  <div class="section">
+    <details open class="details">
+      <summary>📦 1. Install Git</summary>
+      <p>To start using Git, you need to install it on your computer. Visit <a href="https://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a> and download the version suitable for your OS. Install it with default settings.</p>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🔧 2. Configure Git</summary>
+      <p>Set your name and email so Git can label your commits:</p>
+      <pre><code>git config --global user.name "Your Name"
+git config --global user.email "you@example.com"</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>📁 3. Initialize a Git Repository</summary>
+      <p>Navigate to your project folder and initialize Git:</p>
+      <pre><code>cd path/to/your/project
+git init</code></pre>
+      <p>This creates a hidden <code>.git</code> folder that tracks changes.</p>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>📤 4. Add and Commit Files</summary>
+      <p>Stage your files and commit them with a message:</p>
+      <pre><code>git add .
+git commit -m "Initial commit"</code></pre>
+      <p><code>git add .</code> adds all files. You can also add specific files like <code>git add index.html</code>.</p>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🌐 5. Connect to GitHub</summary>
+      <p>Create a new repository on <a href="https://github.com" target="_blank">GitHub</a> (don’t initialize with README). Then connect it:</p>
+      <pre><code>git remote add origin https://github.com/your-username/your-repo.git</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🚀 6. Push to GitHub</summary>
+      <p>Rename your branch to <code>main</code> and push:</p>
+      <pre><code>git branch -M main
+git push -u origin main</code></pre>
+      <p>Use the correct remote name: <code>origin</code> (not <code>orgin</code>).</p>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🔁 7. Common Git Commands</summary>
+      <pre><code>git status            # View current changes
+git add filename.ext  # Stage specific file
+git commit -m "msg"   # Commit with message
+git pull              # Fetch changes from GitHub
+git push              # Push your changes</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🧠 8. Check or Fix Remote URL</summary>
+      <pre><code>git remote -v         # View current remote URL
+
+# If incorrect:
+git remote set-url origin https://github.com/your-username/your-repo.git</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>✅ 9. Final Notes</summary>
+      <p>Make sure to:</p>
+      <ul>
+        <li>Use HTTPS or SSH correctly</li>
+        <li>Check remote URL spelling</li>
+        <li>Use correct branch (main or master)</li>
+        <li>Generate a Personal Access Token if required for HTTPS</li>
+      </ul>
+      <p>🎉 You’ve successfully pushed code to GitHub!</p>
+    </details>
+</div>
+
+  <div class="section">
+    <details class="details">
+      <summary>📂 11. Cloning a Repository</summary>
+      <p>Use this to copy a GitHub repository to your local machine:</p>
+      <pre><code>git clone https://github.com/username/repo-name.git</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>👥 12. Branching and Merging</summary>
+      <p>Work on different features without disturbing the main branch.</p>
+      <pre><code>git branch feature-branch     # Create a branch
+
+git checkout feature-branch  # Switch to it
+
+# Or create and switch in one
+
+git checkout -b new-feature
+
+git merge feature-branch     # Merge into current branch</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🔄 13. Resolving Merge Conflicts</summary>
+      <p>If two branches edit the same line, Git will ask you to fix the conflict manually.</p>
+      <pre><code># After fixing files:
+git add .
+git commit -m "Fix merge conflict"</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🧰 14. Stashing Changes</summary>
+      <p>Save uncommitted changes for later without committing.</p>
+      <pre><code>git stash          # Stash changes
+
+# Later
+
+git stash apply   # Reapply stashed changes</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>📊 15. Viewing Commit History</summary>
+      <p>Track the history of changes:</p>
+      <pre><code>git log            # Full history
+
+git log --oneline # Simplified view</code></pre>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🔐 16. GitHub SSH Authentication</summary>
+      <p>Set up SSH for secure authentication:</p>
+      <pre><code>ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# Add key to SSH agent
+
+ssh-add ~/.ssh/id_ed25519</code></pre>
+      <p>Add the public key to your GitHub account under <em>Settings → SSH and GPG keys</em>.</p>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>📦 17. Fork vs Clone</summary>
+      <ul>
+        <li><strong>Fork:</strong> Creates a personal copy of a GitHub repo on your account. Ideal for contributing.</li>
+        <li><strong>Clone:</strong> Copies a repo to your local machine.</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🌐 18. GitHub Pages for Hosting</summary>
+      <p>You can host static websites from a GitHub repo:</p>
+      <ol>
+        <li>Create a public repo</li>
+        <li>Add HTML/CSS/JS files</li>
+        <li>Go to repo Settings → Pages</li>
+        <li>Select branch and save. URL will be <code>https://your-username.github.io/repo-name</code></li>
+      </ol>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🧑‍🤝‍🧑 19. Collaborators and Permissions</summary>
+      <p>In private/public repos, you can invite collaborators with different roles:</p>
+      <ul>
+        <li><strong>Admin</strong>: Full access</li>
+        <li><strong>Write</strong>: Push changes</li>
+        <li><strong>Read</strong>: View-only</li>
+      </ul>
+    </details>
+  </div>
+
+  <div class="section">
+    <details class="details">
+      <summary>🚨 20. Revert and Reset</summary>
+      <p>If things go wrong:</p>
+      <pre><code>git checkout filename        # Discard changes in a file
+
+git reset --hard HEAD       # Reset to last commit
+
+git revert COMMIT_ID        # Create new commit that undoes</code></pre>
+    </details>
+  </div>
+
+  <!-- Footer -->
+  <div class="section">
+    <details class="details">
+      <summary>📘 21. Glossary</summary>
+      <ul>
+        <li><strong>Commit:</strong> Save changes</li>
+        <li><strong>Branch:</strong> Parallel version of repo</li>
+        <li><strong>Merge:</strong> Combine branches</li>
+        <li><strong>Clone:</strong> Copy repo to local machine</li>
+        <li><strong>Fork:</strong> Copy repo to GitHub account</li>
+        <li><strong>Pull Request:</strong> Propose code change</li>
+        <li><strong>Push:</strong> Upload changes</li>
+        <li><strong>Pull:</strong> Download changes</li>
+      </ul>
+    </details>
+  </div>
+
+
+  
+
 </body>
 </html>
