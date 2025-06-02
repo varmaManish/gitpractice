@@ -40,6 +40,24 @@
       font-weight: bold;
       cursor: pointer;
     }
+      .diagram {
+      margin: 20px 0;
+      max-width: 100%;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.5; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 0.5; transform: scale(0.95); }
+    }
+    .animated-node {
+      animation: pulse 2s infinite;
+      display: inline-block;
+      margin: 10px;
+      padding: 10px;
+      background: #3498db;
+      color: #fff;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -264,6 +282,25 @@ git revert COMMIT_ID        # Create new commit that undoes</code></pre>
         <li><strong>Pull Request:</strong> Propose code change</li>
         <li><strong>Push:</strong> Upload changes</li>
         <li><strong>Pull:</strong> Download changes</li>
+      </ul>
+    </details>
+  </div>
+    <div class="section">
+    <details class="details">
+      <summary>🧩 27. Animated Diagram: Git Workflow</summary>
+      <p>This diagram visually demonstrates the basic Git workflow steps:</p>
+      <div class="diagram">
+        <span class="animated-node">Working Directory</span>
+        ➡️ <span class="animated-node">Staging Area</span>
+        ➡️ <span class="animated-node">Local Repository</span>
+        ➡️ <span class="animated-node">Remote Repository</span>
+      </div>
+      <p>Explanation:</p>
+      <ul>
+        <li><strong>Working Directory:</strong> Where you edit files</li>
+        <li><strong>Staging Area:</strong> Prepared for commit with <code>git add</code></li>
+        <li><strong>Local Repository:</strong> Saved with <code>git commit</code></li>
+        <li><strong>Remote Repository:</strong> Shared with others via <code>git push</code></li>
       </ul>
     </details>
   </div>
